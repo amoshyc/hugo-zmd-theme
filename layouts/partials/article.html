@@ -22,16 +22,17 @@
         </div>
     </div>
 
-    <!-- toc -->
-    {{ with .Params.toc }}
-        <div class="toc">
-            <span>TOC</span>
-            {{ $.TableOfContents }}
-        </div>
-    {{ end }}
-
+    
     <!-- md content -->
     <div class="md-content">
+        <!-- toc -->
+        {{ with .Params.toc }}
+            <div class="toc">
+                <span>TOC</span>
+                {{ $.TableOfContents }}
+            </div>
+        {{ end }}
+        
         {{ .Content }}
     </div>
 

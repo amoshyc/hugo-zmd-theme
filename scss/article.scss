@@ -20,19 +20,12 @@ article {
     }
 
     h1.title {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        color: $fgc1;
-        font-size: 175%;
+        @include util-header('§', 175%);
+        margin: 0px;
+        line-height: 125%;
 
         &::before {
-            font-weight: normal;
-            content: "§";
-            position: absolute;
-            margin-top: 10px;
             margin-left: -35px;
-            color: lighten($fgc2, 10%);
-            font-size: 80%;
         }
     }
 
@@ -50,22 +43,13 @@ article {
         }
     }
 
-    div.toc {
+    div.md-content {
         margin-top: 18px;
         margin-bottom: 0px;
 
-        span {
-            font-weight: bold;
-            font-size: 105%;
-
-        }
-
-        a {
-            color: $fgc3;
-            text-decoration: none;
-
-            &:hover {
-                color: lighten($fgc3, 10%);
+        div.toc {
+            span {
+                font-weight: bold;
             }
         }
     }

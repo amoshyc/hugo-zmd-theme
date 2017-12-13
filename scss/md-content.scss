@@ -1,5 +1,144 @@
+@mixin util-header($content, $scale) {
+    margin: 20px 0px;
+    font-weight: bold;
+    font-size: $scale;
+    line-height: $scale;
+    color: $fgc1;
+
+    &:before {
+        font-weight: normal;
+        content: $content;
+        position: absolute;
+        margin-top: 2px;
+        margin-left: -50px;
+        color: #ddd;
+        font-size: 65%;
+    }
+}
+
 .md-content {
+    // paragraph
+    p {
+        margin: 0px 0px 0px 0px;
+        white-space: pre-wrap;
+        font-size: 105%;
+        line-height: 150%;
+        letter-spacing: 0.4px;
+        word-spacing: 2.4px;
+    }
+
+    p + p {
+        margin-top: 15px;
+    }
+
+    // inline literal
+    code {
+        padding-left: 5px;
+        padding-right: 5px;
+        color: $fgc4;
+        font-family: 'Oxygen Mono', monospace;
+        font-size: 95%;
+    }
+
+    // hyperlink
+    a {
+        color: $fgc3;
+        text-decoration: none;
+
+        &:hover {
+            color: lighten($fgc3, 10%);
+        }
+    }
+
+    // list
+    ul, ol {
+        li {
+            line-height: 150%;
+        }
+    }
+
+    // header
+    h1 { @include util-header('H1', 175%); }
+    h2 { @include util-header('H2', 150%); }
+    h3 { @include util-header('H3', 140%); }
+    h4 { @include util-header('H4', 130%); }
+    h5 { @include util-header('H5', 120%); }
+    h6 { @include util-header('H6', 110%); }
+
+    // general code block
+    pre {
+        margin: 25px 0px;
+        padding: 10px 10px;
+        border: 1px solid #ccc;
+        overflow: auto;
+        white-space: pre-wrap;
+        font-family: 'Oxygen Mono', monospace;
+        background-color: lighten($bgc, 2%);
+        
+        code {
+            color: $fgc1;
+            padding: 0px;
+            font-size: 85%;
+            line-height: 0.85 * 1.35;
+            overflow-y: hidden;
+        }
+    }
+
+    // blockquote
+    blockquote {
+        margin: 25px 0px;
+        border-left: 2px solid #ddd;
+        padding-left: 38px;
+
+        p {
+            line-height: 150%;
+            white-space: pre-wrap;
+        }
+    }
+
+    // image
     img {
         width: $max-width;
+    }
+
+    // hr 
+    hr {
+        margin: 24px 0px;
+        border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    // table 
+    table {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        font-size: 100%;
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        tbody {
+            border-top: 2px double #ccc;
+        }
+
+        thead {
+            tr {
+                color: black;
+                background-color: $bgc;
+            }
+        }
+
+        tbody {
+            tr:nth-child(odd) {
+                background-color: #f4f4f4;
+            }
+        }
+    }
+
+    table + table {
+        margin-top: 30px;
     }
 }
