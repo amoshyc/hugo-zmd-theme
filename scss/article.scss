@@ -1,0 +1,72 @@
+article {
+    margin: 30px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+
+    div.top {
+        span {
+            font-size: 80%;
+            color: $fgc2;
+        }
+
+        a {
+            color: $fgc2;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline
+            }
+        }
+    }
+
+    h1.title {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        color: $fgc1;
+        font-size: 175%;
+
+        &::before {
+            font-weight: normal;
+            content: "§";
+            position: absolute;
+            margin-top: 10px;
+            margin-left: -35px;
+            color: lighten($fgc2, 10%);
+            font-size: 80%;
+        }
+    }
+
+    div.bottom {
+        margin-top: 5px;
+
+        a {
+            color: $fgc2;
+            font-size: 80%;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline
+            }
+        }
+    }
+
+    div.toc {
+        margin-top: 18px;
+        margin-bottom: 0px;
+
+        span {
+            font-weight: bold;
+            font-size: 105%;
+
+        }
+
+        a {
+            color: $fgc3;
+            text-decoration: none;
+
+            &:hover {
+                color: lighten($fgc3, 10%);
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{{ define "title" }}
+    {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+    {{ range .Pages }}
+        <a href="{{ .URL }}">{{ .Title }}</a><br/>
+    {{ end }}
+{{ end }}

@@ -1,0 +1,30 @@
+<html lang="tw">
+    <head>
+        <title>
+        {{ template "title" . }}
+        </title>
+
+        <!-- meta -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link rel="shortcut icon" type="image/jpeg" href="{{ "me.jpg" | relURL }}" />
+        
+        <!-- zmd style & script -->
+        <link rel="stylesheet" href="{{ "style.min.css" | relURL }}">
+        <script defer src="{{ "style.min.js" | relURL }}"></script>
+    </head>
+
+    <body>
+        <!-- header -->
+        {{ partial "header" . }}
+
+        <!-- content -->
+        <main>
+            {{ template "content" . }}
+        </main>
+
+        <!-- footer -->
+        {{ partial "footer" . }}
+</body>
+
+</html>

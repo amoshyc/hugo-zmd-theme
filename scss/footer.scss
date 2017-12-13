@@ -1,0 +1,27 @@
+footer {
+    max-width: $max-width;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+
+    div.hr {
+        width: $max-width;
+        height: 1px;
+        background: radial-gradient(#ddd, #fff);
+        background-position: top center;
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+    }
+
+    p {
+        margin: 10px auto;
+        color: lighten($fgc1, 55%);
+        font-size: 85%;
+        font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC', serif;
+
+        a {
+            color: lighten($fgc1, 55%);
+            text-decoration: underline;
+        }
+    }
+}

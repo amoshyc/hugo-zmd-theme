@@ -1,0 +1,26 @@
+$bgc: #fafafa;      // background color
+$fgc1: #404040;     // foreground color (black)
+$fgc2: #bbbbbb;     // foreground color (gray)
+$fgc3: #4caf50;     // foreground color (green)
+$fgc4: #f57c00;     // foreground color (orange)
+
+$selection-bg: #4cae7b;
+$selection-fg: #ffffff;
+
+$icon-size: 100px;
+$font-size: 18px;
+
+$max-width: 700px;
+
+// english font
+@import url('https://fonts.googleapis.com/css?family=Bitter:400,700|Roboto+Slab:400,700|Oxygen Mono');
+
+// chinese font
+@font-face {
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 500;
+    src: url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff2) format('woff2'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.woff) format('woff'),
+        url(//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Regular.otf) format('opentype');
+}

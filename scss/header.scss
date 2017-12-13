@@ -1,0 +1,40 @@
+header {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    
+    div.icon {
+        margin: 30px auto 0px auto;
+        img {
+            width: $icon-size;
+            height: $icon-size;
+            border-radius: $icon-size / 2;
+        }
+    }
+    
+    div.name {
+        margin: 8px auto 0px auto;
+        a {
+            text-decoration: none;
+            color: $fgc1;
+            font-size: 115%;
+            font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC', serif;
+        }
+    }
+    
+    div.menu {
+        margin: 6px auto 0px auto;
+        a {
+            text-decoration: none;
+            color: lighten($fgc1, 6%);
+            font-size: 100%;
+            font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC', serif;
+            &:hover {
+                color: lighten($fgc1, 30%);
+            }
+        }
+        a + a {
+            margin-left: 7px;
+        }
+    }
+}

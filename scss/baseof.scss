@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Bitter', 'Source Han Sans TW', 'Noto Sans TC', sans;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: $bgc;
+    font-size: $font-size;
+
+    main {
+        margin: 0px auto;
+        max-width: $max-width;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+::selection {
+    color: $selection-fg;
+    background-color: $selection-bg;
+}
+::-moz-selection {
+    color: $selection-fg;
+    background-color: $selection-bg;
+}

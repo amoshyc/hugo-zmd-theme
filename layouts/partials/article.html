@@ -1,0 +1,38 @@
+<article>
+
+    <!-- information -->
+    <div class="info">
+        <div class="top">
+            <span>{{ .Date.Format "2006/01/02" }}</span>
+            <span>@</span>
+            <span>
+                {{ range $i, $c := .Params.categories }}
+                   {{ if gt $i 0 }}, {{ end }}
+                   <a href="">{{ $c }}</a>
+                {{ end }}
+            </span>
+        </div>
+
+        <h1 class="title">{{ .Title }}</h1>
+
+        <div class="bottom">
+            {{ range .Params.tags }}
+                <a href="">{{ . }}</a>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- toc -->
+    {{ with .Params.toc }}
+        <div class="toc">
+            <span>TOC</span>
+            {{ $.TableOfContents }}
+        </div>
+    {{ end }}
+
+    <!-- md content -->
+    <div class="md-content">
+        {{ .Content }}
+    </div>
+
+</article>
