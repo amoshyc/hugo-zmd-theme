@@ -17,10 +17,10 @@
 }
 
 .md-content {
+    width: $max-width;
 
     // paragraph
     p {
-        width: $max-width;
         margin: 0px 0px 0px 0px;
         white-space: pre-wrap;
         font-size: 105%;
@@ -69,17 +69,16 @@
 
     // general code block
     pre {
-        width: $max-width;
         margin: 25px 0px;
         padding: 10px 10px;
         border: 1px solid #ccc;
-        overflow: auto;
         white-space: pre-wrap;
         font-family: 'Oxygen Mono', monospace;
         background-color: lighten($bgc, 2%);
+        overflow-x: auto;
         overflow-y: hidden;
         
-        code {
+        & > code {
             color: $fgc1;
             padding: 0px;
             font-size: 85%;
@@ -95,6 +94,7 @@
         padding-left: 38px;
         
         p {
+            width: calc(100% - 40px);
             line-height: 150%;
             white-space: pre-wrap;
         }
@@ -102,20 +102,19 @@
 
     // image
     img {
-        width: $max-width;
+        width: 100%;
     }
 
     // hr 
     hr {
-        width: $max-width;
+        width: 100%;
         margin: 24px 0px;
         border-color: rgba(255, 255, 255, 0.4);
     }
 
-    // table 
-    table {
-        margin-top: 20px;
-        margin-bottom: 20px;
+    // table (general table)
+    table:not(.lntable) {
+        margin: 20px auto;
         border-collapse: collapse;
         font-size: 100%;
 
@@ -143,7 +142,81 @@
         }
     }
 
-    table + table {
-        margin-top: 30px;
+    // highlight
+    div.highlight {
+        margin: 20px 0px;
+
+        & > pre { // inline mode
+            & > code {
+                @extend .pygments;
+                color: $fgc1;
+                font-size: $font-size * 0.85;
+                line-height: $font-size * 0.85 * 1.35;
+
+                span {
+                    font-family: 'Oxygen Mono', monospace;
+                }
+                span.ln {
+                    color: lighten($fgc1, 30%);
+                    margin-right: 20px;
+                }
+            }
+        }
+
+        table.lntable { // table mode
+            margin: 0px 0px 0px -40px;
+            padding: 0px;
+            border: none;
+            overflow-x: auto;
+            overflow-y: hidden;
+            
+            tbody, tr, td, pre, code {
+                margin: 0px;
+                padding: 0px;
+                border: none;
+            }
+            
+            td:first-child { // linenos
+                width: 40px;
+                padding: 11px 0px; // padding + border;
+                background-color: $bgc;
+                vertical-align: top;
+                
+                pre {
+                    code {
+                        color: #ddd; // overwrite the color of general code
+                        font-size: $font-size * 0.85;
+                        line-height: $font-size * 0.85 * 1.35;
+                        
+                        span.lnt {
+                            font-family: 'Oxygen Mono', monospace;
+                            display: block;
+                            background-color: $bgc;
+                        }
+                    }
+                }
+            }
+            
+            td:last-child { // code body
+                width: $max-width;
+                padding: 10px;
+                border: 1px solid #ccc;
+                background-color: #fff;
+                vertical-align: top;
+
+                pre {
+                    code {
+                        @extend .pygments;
+                        color: $fgc1; // overwrite the color of general code
+                        font-size: $font-size * 0.85;
+                        line-height: $font-size * 0.85 * 1.35;
+
+                        span {
+                            font-family: 'Oxygen Mono', monospace;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
