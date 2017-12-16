@@ -242,6 +242,14 @@
         * {
             margin: 0px auto;
         }
+
+        img {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0px auto;
+        }
+
         h4 {
             margin: 5px auto 10px auto;
             font-size: 95%;
