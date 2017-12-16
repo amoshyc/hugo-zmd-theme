@@ -256,8 +256,6 @@
 
     // jupyter notebook
     div.jupyter-notebook {
-        background-color: $bgc;
-
         & > iframe {
             width: 1.2 * $width;
             border: none;
