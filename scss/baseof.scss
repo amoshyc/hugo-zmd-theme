@@ -11,10 +11,10 @@ body {
     font-size: $font-size;
 
     main {
-        margin: 0px auto;
-        max-width: $max-width;
         display: flex;
         flex-direction: column;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
 

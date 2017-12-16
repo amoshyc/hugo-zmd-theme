@@ -1,44 +1,48 @@
 article {
-    margin: 30px auto 0px auto;
     display: flex;
     flex-direction: column;
 
-    div.top {
-        span {
-            font-size: 80%;
-            color: $fgc2;
-        }
+    div.info {
+        width: 700px;
+        margin: 0px auto;
 
-        a {
-            color: $fgc2;
-            text-decoration: none;
+        div.top {
+            span {
+                font-size: 80%;
+                color: $fgc2;
+            }
 
-            &:hover {
-                text-decoration: underline
+            a {
+                color: $fgc2;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline
+                }
             }
         }
-    }
 
-    h1.title {
-        @include util-header('§', 175%);
-        margin: 0px;
-        line-height: 125%;
+        h1.title {
+            @include util-header('§', 175%);
+            margin: 0px;
+            line-height: 125%;
 
-        &::before {
-            margin-left: -35px;
+            &::before {
+                margin-left: -35px;
+            }
         }
-    }
 
-    div.bottom {
-        margin-top: 5px;
+        div.bottom {
+            margin-top: 5px;
 
-        a {
-            color: $fgc2;
-            font-size: 80%;
-            text-decoration: none;
+            a {
+                color: $fgc2;
+                font-size: 80%;
+                text-decoration: none;
 
-            &:hover {
-                text-decoration: underline
+                &:hover {
+                    text-decoration: underline
+                }
             }
         }
     }
@@ -48,6 +52,9 @@ article {
         margin-bottom: 0px;
 
         div.toc {
+            width: 700px;
+            margin: 0px auto;
+            
             span {
                 font-weight: bold;
             }
