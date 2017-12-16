@@ -1,11 +1,11 @@
 footer {
-    max-width: $max-width;
+    max-width: $width;
     margin: 30px auto;
     display: flex;
     flex-direction: column;
 
     div.hr {
-        width: $max-width;
+        width: $width;
         height: 1px;
         background: radial-gradient(#ddd, #fff);
         background-position: top center;
