@@ -1,0 +1,16 @@
+{{ .Page.Scratch.Add "cntExpansion" 1 }}
+{{ $id := (.Page.Scratch.Get "cntExpansion") }}
+
+<div class="expansion">
+
+    <input id="ck{{ $id }}" type="checkbox">
+
+    <label id="lb{{ $id }}" for="ck{{ $id }}">
+    {{ if .IsNamedParams }} {{ .Get "title"}} {{ else }} {{ .Get 0}} {{ end }}
+    </label>
+
+    <div id="in{{ $id }}" class="content">
+        {{ .Inner }}
+    </div>
+
+</div>

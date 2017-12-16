@@ -1,0 +1,23 @@
+<div class="admonition">
+    {{ $.Scratch.Set "title" "" }}
+    {{ $.Scratch.Set "color" "#64b5f6" }}
+
+    {{ if .IsNamedParams }}
+        {{ $.Scratch.Set "title" (.Get "title") }}
+        {{ $.Scratch.Set "color" (.Get "color" | lower) }}
+    {{ else }}
+        {{ $.Scratch.Set "title" (.Get 0) }}
+        {{ $.Scratch.Set "color" (.Get 1 | lower) }}
+    {{ end }}
+    
+    {{ $colors := dict "red" "#f44336" "blue" "#64b5f6" "yellow" "#ffc107" "teal" "#009688"}}
+    {{ if isset $colors ($.Scratch.Get "color") }}
+        {{ $.Scratch.Set "color" (index $colors ($.Scratch.Get "color")) }}
+    {{ end }}
+
+    <span class="title" style="background-color: {{ $.Scratch.Get `color` }}">
+        {{ $.Scratch.Get "title" }}
+    </span>
+
+    <div class="content">{{ .Inner }}</div>
+</div>

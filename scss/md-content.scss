@@ -142,6 +142,8 @@
 
     // highlight
     div.highlight {
+        margin: 20px 0px;
+        
         & > pre { // inline mode
             width: $width;
 
@@ -238,6 +240,7 @@
     figure {
         display: flex;
         flex-direction: column;
+        margin: 0px auto;
 
         * {
             margin: 0px auto;
@@ -247,7 +250,6 @@
             position: relative;
             left: 50%;
             transform: translateX(-50%);
-            margin: 0px auto;
         }
 
         h4 {
@@ -271,5 +273,81 @@
             left: 50%;
             transform: translateX(-50%);
         }
+    }
+
+    // admonition
+    div.admonition {
+        display: flex;
+        flex-direction: column;
+        width: $width;
+        margin: 20px auto;
+        border: 1px solid #e3e3e3;
+        background-color: #f5f5f5;
+
+        span.title {
+            width: 100%;
+            margin: 0px;
+            padding: 7px 15px;
+            font-size: 100%;
+            line-height: 100%;
+            color: white;
+        }
+        div.content {
+            padding: 0px 15px;
+        }
+    }
+
+    // Colro square
+    span.colorsq {
+        display: inline-block;
+        width: $font-size * 0.8;
+        height: $font-size * 0.8;
+        border: none;
+    }
+
+    // Expansion
+    div.expansion {
+        width: $width;
+        margin: 20px auto;
+
+        input {
+            display: none;
+        }
+
+        label {
+            color: $fgc1;
+            position: relative;
+            &:hover {
+                color: lighten($fgc1, 15%);
+            }
+            &:before {
+                content: "\229e";
+                position: absolute;
+                left: -25px;
+            }
+        }
+
+        div.content {
+            height: 0px;
+            overflow: hidden;
+            transition: height 0.5s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #ck1:checked ~ #lb1:before { content: "\229f"; }
+        #ck1:checked ~ #in1 { height: auto; overflow: initial; }
+
+        #ck2:checked ~ #lb2:before { content: "\229f"; }
+        #ck2:checked ~ #in2 { height: auto; overflow: initial; }
+
+        #ck3:checked ~ #lb3:before { content: "\229f"; }
+        #ck3:checked ~ #in3 { height: auto; overflow: initial; }
+
+        #ck4:checked ~ #lb4:before { content: "\229f"; }
+        #ck4:checked ~ #in4 { height: auto; overflow: initial; }
+
+        #ck5:checked ~ #lb5:before { content: "\229f"; }
+        #ck5:checked ~ #in5 { height: auto; overflow: initial; }
     }
 }
