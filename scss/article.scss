@@ -1,11 +1,11 @@
 article {
+    width: 700px;
+    margin: 30px auto;
+    
     display: flex;
     flex-direction: column;
 
     div.info {
-        width: 700px;
-        margin: 0px auto;
-
         div.top {
             span {
                 font-size: 80%;
@@ -52,9 +52,6 @@ article {
         margin-bottom: 0px;
 
         div.toc {
-            width: 700px;
-            margin: 0px auto;
-            
             span {
                 font-weight: bold;
             }

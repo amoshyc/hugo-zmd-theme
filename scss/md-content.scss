@@ -1,6 +1,4 @@
 @mixin util-header($content, $scale) {
-    width: $max-width;
-    margin: 20px auto;
     font-weight: bold;
     font-size: $scale;
     line-height: $scale;
@@ -21,8 +19,6 @@
 
     // paragraph
     p {
-        width: $max-width;
-        margin: 0px auto;
         white-space: pre-wrap;
         font-size: 105%;
         line-height: 150%;
@@ -55,9 +51,6 @@
 
     // list
     ul, ol {
-        width: $max-width;
-        margin: 20px auto;
-
         li {
             line-height: 150%;
         }
@@ -74,7 +67,7 @@
     // general code block
     pre {
         width: $max-width;
-        margin: 25px auto;
+        margin: 25px 0px;
         padding: 10px 10px;
         border: 1px solid #ccc;
         white-space: pre-wrap;
@@ -94,8 +87,6 @@
 
     // blockquote
     blockquote {
-        width: $max-width;
-        margin: 25px auto;
         border-left: 2px solid #ddd;
         padding-left: 38px;
         
@@ -108,14 +99,13 @@
 
     // image
     p > img {
-        width: $max-width;
-        margin: 10px auto;
+        max-width: $max-width;
+        margin: 20px 0px;
     }
 
     // hr 
     hr {
-        width: $max-width;
-        margin: 24px auto;
+        margin: 24px 0px;
         border-color: rgba(255, 255, 255, 0.4);
     }
 
@@ -151,10 +141,8 @@
 
     // highlight
     div.highlight {
-        margin: 20px auto;
-
         & > pre { // inline mode
-            max-width: $max-width;
+            width: $max-width;
 
             & > code {
                 @extend .pygments;
@@ -173,7 +161,8 @@
         }
 
         table.lntable { // table mode
-            margin: 0px 0px 0px -40px;
+            width: calc(#{$max-width} + 39px);
+            margin: 0px 0px 0px -43px;
             padding: 0px;
             border: none;
             overflow-x: auto;
@@ -186,13 +175,12 @@
             }
             
             td:first-child { // linenos
-                width: 40px;
-                padding: 11px 0px; // padding + border;
                 background-color: $bgc;
                 vertical-align: top;
                 
                 pre {
                     width: 40px;
+                    padding: 11px 0px; // padding + border;
 
                     code {
                         color: #ddd; // overwrite the color of general code
@@ -209,13 +197,14 @@
             }
             
             td:last-child { // code body
-                width: $max-width;
-                padding: 10px;
-                border: 1px solid #ccc;
                 background-color: #fff;
                 vertical-align: top;
-
+                
                 pre {
+                    width: $max-width;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+
                     code {
                         @extend .pygments;
                         color: $fgc1; // overwrite the color of general code
@@ -258,28 +247,10 @@
             font-weight: normal;
         }
     }
-    
-    // youtube 
-    div.youtube {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        height: 0;
-        overflow: hidden;
-
-        & > iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    }
 
     // tweet
     twitterwidget {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 20px auto;
     }
 
     // jupyter notebook
