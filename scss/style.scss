@@ -1,6 +1,8 @@
 @import "vars.scss";
-@import "md-content.scss";
 @import "pygments.scss";
+@import "md-content.scss";
+@import "builtin-shortcodes.scss";
+@import "custom-shortcodes.scss";
 
 @import "baseof";
 @import "header.scss";
