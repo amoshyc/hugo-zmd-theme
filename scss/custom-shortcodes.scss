@@ -86,5 +86,14 @@
 
         #ck5:checked ~ #lb5:before { content: "\229f"; }
         #ck5:checked ~ #in5 { height: auto; overflow: initial; }
+
+        #ck6:checked ~ #lb6:before { content: "\229f"; }
+        #ck6:checked ~ #in6 { height: auto; overflow: initial; }
+
+        #ck7:checked ~ #lb7:before { content: "\229f"; }
+        #ck7:checked ~ #in7 { height: auto; overflow: initial; }
+
+        #ck8:checked ~ #lb8:before { content: "\229f"; }
+        #ck8:checked ~ #in8 { height: auto; overflow: initial; }
     }
 }
