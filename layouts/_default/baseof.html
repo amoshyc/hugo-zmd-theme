@@ -12,6 +12,22 @@
         <!-- zmd style & script -->
         <link rel="stylesheet" href="{{ "style.min.css" | relURL }}">
         <script defer src="{{ "style.min.js" | relURL }}"></script>
+
+        <!-- mathjax -->
+        {{ if .GetParam "math" }}
+            <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+            <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                asciimath2jax: {
+                    delimiters: [['$$','$$']]
+                },
+                tex2jax: {
+                    inlineMath: [['$[', ']$']],
+                    displayMath: [],
+                }
+            });
+            </script>
+        {{ end }}
     </head>
 
     <body>

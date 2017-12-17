@@ -1,0 +1,7 @@
+<div class="am-block" style="display:flex; flex-direction:column">
+    {{ range (split .Inner "\n") }}
+        {{ if (ne . "")}}
+            <div class="am-line" style="margin: 5px auto">$${{ . }}$$</div>
+        {{ end }}
+    {{ end }}
+</div>
