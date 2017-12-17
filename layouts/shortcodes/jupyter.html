@@ -1,11 +1,14 @@
 <div class="jupyter-notebook">
-    <script defer>
-        function notebook_onload(obj) {
-            var bg = window.getComputedStyle(document.body, null)['background-color']
-            obj.style.height = obj.contentDocument.body.scrollHeight + 'px';
-            obj.contentDocument.body.style.backgroundColor = bg;
-        }
-    </script>
+    {{ .Page.Scratch.Add "cntJupyter" 1}}
+    {{ if eq (.Page.Scratch.Get "cntJupyter") 1 }}
+        <script defer>
+            function notebook_onload(obj) {
+                var bg = window.getComputedStyle(document.body, null)['background-color']
+                obj.style.height = obj.contentDocument.body.scrollHeight + 'px';
+                obj.contentDocument.body.style.backgroundColor = bg;
+            }
+        </script>
+    {{ end }}
     {{ if .IsNamedParams }}
         <iframe src="{{ .Get `src` }}" scrolling="no" onload="notebook_onload(this)"></iframe>
     {{ else }}
