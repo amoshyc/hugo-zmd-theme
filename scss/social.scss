@@ -1,0 +1,40 @@
+div.social {
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+
+    .icon {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 20px;
+        opacity: 0.5;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1.0;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+
+            path {
+                fill: white;
+            }
+        }
+    }
+
+    .icon + .icon {
+        margin-left: 5px;
+    }
+
+    .facebook {
+        background-color: #3B5998;
+    }
+    .googleplus {
+        background-color: #DC4E41;
+    }
+    .twitter {
+        background-color: #1DA1F2;
+    }
+}
