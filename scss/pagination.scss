@@ -1,5 +1,5 @@
 div.pagination {
-    margin: 40px auto 0px auto;
+    margin: 50px auto 0px auto;
     width: $width;
     display: flex;
     flex-direction: row;
@@ -33,7 +33,7 @@ div.pagination {
         
         a {
             display: inline-block;
-            width: 20px;
+            width: 25px;
             text-align: center;
         }
         a.current {
