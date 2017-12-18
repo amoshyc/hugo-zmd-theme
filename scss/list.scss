@@ -5,7 +5,7 @@ div.list {
     flex-direction: column;
     
     div.entry {
-        margin: 25px 0px 0px 0px;
+        margin: 0px;
 
         span.title {
             display: block;
@@ -27,5 +27,8 @@ div.list {
             font-size: $font-size * 0.85;
             color: #777;
         }
+    }
+    div.entry + div.entry {
+        margin-top: 25px;
     }
 }

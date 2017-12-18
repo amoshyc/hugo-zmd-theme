@@ -1,0 +1,46 @@
+div.pagination {
+    margin: 40px auto 0px auto;
+    width: $width;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    a {
+        color: $fgc3;
+        text-decoration: none;
+        font-size: $font-size * 1.2;
+        font-family: 'Roboto Slab', serif;
+
+        &:hover {
+            color: lighten($fgc3, 15%);
+        }
+    }
+
+    a.prev {
+        margin-left: 0;
+        margin-right: auto;
+    }
+    a.next {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    div.numbers {
+        // To center the div, I use absolute position.
+        // It's a workaround due to lack of justify-self.
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        a {
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+        a.current {
+            color: $fgc1;
+            &:hover {
+                color: $fgc1;
+            }
+        }
+    }
+}
