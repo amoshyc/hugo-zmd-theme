@@ -1,0 +1,31 @@
+div.list {
+    width: $width;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    
+    div.entry {
+        margin: 25px 0px 0px 0px;
+
+        span.title {
+            display: block;
+            font-size: $font-size * 1.2;
+
+            a {
+                color: $fgc3;
+                text-decoration: none;
+
+                &:hover {
+                    color: lighten($fgc3, 15%);
+                }
+            }
+
+        }
+        span.date {
+            margin-top: 5px;
+            display: block;
+            font-size: $font-size * 0.85;
+            color: #777;
+        }
+    }
+}

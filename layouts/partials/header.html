@@ -2,19 +2,19 @@
     
     <!-- icon -->
     <div class="icon">
-        <a href=""><img src="{{ "me.jpg" | relURL }}" alt="me"></a>
+        <a href="{{ .Site.BaseURL }}"><img src="{{ "me.jpg" | relURL }}" alt="me"></a>
     </div>
 
     <!-- name -->
     <div class="name">
-        <a href="">Yu-Cheng Huang</a>
+        <a href="{{ .Site.BaseURL }}">Yu-Cheng Huang</a>
     </div>
 
     <!-- navigation/menu -->
     <div class="menu">
-        <a href="">ABOUT</a>
-        <a href="">CATEGORY</a>
-        <a href="">TAG</a>
+        <a href="{{ `about.html` | relURL }}">ABOUT</a>
+        <a href="{{ `categories.html` | relURL }}">CATEGORY</a>
+        <a href="{{ `tags.html` | relURL }}">TAG</a>
     </div>
 
 </header>

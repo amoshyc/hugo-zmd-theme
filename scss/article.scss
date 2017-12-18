@@ -1,6 +1,6 @@
 article {
     width: 700px;
-    margin: 30px auto;
+    margin: 20px auto;
     
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ article {
         }
 
         div.bottom {
-            margin-top: 5px;
+            margin-top: 2px;
 
             a {
                 color: $fgc2;
