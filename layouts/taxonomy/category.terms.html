@@ -1,9 +1,20 @@
 {{ define "title" }}
-    {{ .Site.Title }}
+    Categories | {{ .Site.Title }}
 {{ end }}
 
 {{ define "content" }}
-    {{ range .Pages }}
-        <a href="{{ .URL }}">{{ .Title }}</a><br/>
-    {{ end }}
+    <div class="list">
+        <div class="taxonomy entry">
+            <span>Categories</span>
+        </div>
+
+        {{ range $k, $v := .Data.Terms.ByCount }}
+            <div class="entry">
+                <span class="title">
+                    <a href="{{ $.Data.Plural }}/{{ $v.Name | urlize }}.html">{{ $v.Name }}</a>
+                </span>
+                <span class="info">{{ $v.Count }} articles </span>
+            </div>
+        {{ end }}
+    </div>
 {{ end }}

@@ -3,6 +3,19 @@ div.list {
     margin: 0px auto;
     display: flex;
     flex-direction: column;
+
+    div.taxonomy {
+        background: linear-gradient(to right, #aaa, #fff);
+        background-position: bottom left;
+        background-size: 50% 1px;
+        background-repeat: no-repeat;
+        height: 32px;
+
+        span {
+            vertical-align: top;
+            font-size: $font-size * 1.2;
+        }
+    }
     
     div.entry {
         margin: 0px;
@@ -10,6 +23,7 @@ div.list {
         span.title {
             display: block;
             font-size: $font-size * 1.2;
+            line-height: $font-size * 1.3;
 
             a {
                 color: $fgc3;
@@ -21,7 +35,7 @@ div.list {
             }
 
         }
-        span.date {
+        span.info {
             margin-top: 5px;
             display: block;
             font-size: $font-size * 0.85;

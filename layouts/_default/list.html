@@ -1,9 +1,13 @@
 {{ define "title" }}
-    {{ .Site.Title }}
+    {{ .Data.Singular | humanize }}: {{ .Data.Term }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "content" }}
     <div class="list">
+        <div class="taxonomy entry">
+            <span>{{ .Data.Singular | humanize }}: {{ .Data.Term }}</span>
+        </div>
+
         {{ range .Paginator.Pages.ByDate.Reverse }}
             {{ if eq .File.Ext "md" }}
                 <div class="entry">

@@ -1,0 +1,43 @@
+div.tags {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a.tag {
+        margin-bottom: 20px;
+        color: $fgc3;
+        text-decoration: none;
+
+        &:hover {
+            color: lighten($fgc3, 20%);
+        }
+
+        span {
+            display: inline-block;
+        }
+
+        span.count {
+            color: lighten($fgc3, 20%);
+            font-size: 80%;
+        }
+    }
+
+    a.tag + a.tag {
+        margin-left: 15px;
+    }
+
+    a.rank-0 span {
+        font-size: 100%;
+    }
+    a.rank-1 span {
+        font-size: 120%;
+    }
+    a.rank-2 span {
+        font-size: 135%;
+    }
+    a.rank-3 span {
+        font-size: 150%;
+    }
+}
