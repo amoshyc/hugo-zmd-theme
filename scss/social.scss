@@ -3,6 +3,10 @@ div.social {
     display: flex;
     flex-direction: row;
 
+    @media print {
+        display: none;
+    }
+
     .icon {
         display: inline-block;
         padding: 10px;

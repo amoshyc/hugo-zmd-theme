@@ -12,6 +12,10 @@
         margin-left: -50px;
         color: #ddd;
         font-size: 65%;
+
+        @media print {
+            margin-left: -40px;
+        }
     }
 }
 

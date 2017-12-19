@@ -4,6 +4,10 @@ footer {
     display: flex;
     flex-direction: column;
 
+    @media print {
+        display: none;
+    }
+
     div.hr {
         width: $width;
         height: 1px;
