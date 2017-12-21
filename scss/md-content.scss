@@ -143,4 +143,27 @@
             }
         }
     }
+
+    div.footnotes {
+        hr::before {
+            font-weight: normal;
+            content: "FN";
+            position: absolute;
+            margin-top: -10px;
+            margin-left: -50px;
+            color: #ddd;
+            font-size: 100%;
+
+            @media print {
+                margin-left: -40px;
+            }
+        }
+    }
+    sup.footnote-ref:first-child {
+        margin-left: 2px;
+    }
+    sup.footnote-ref + sup.footnote-ref::before {
+        content: ',';
+        color: lighten($fgc3, 10%);
+    }
 }
