@@ -1,6 +1,9 @@
 div.pagination {
     margin: 50px auto 0px auto;
     width: $width;
+    @media screen and (max-width: $width) {
+        width: 93vw;
+    }
     display: flex;
     flex-direction: row;
     justify-content: space-between;
