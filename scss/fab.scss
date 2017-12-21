@@ -6,8 +6,11 @@ div.fab {
         font-size: 80%;
         color: rgba($fgc3, 0.3);
         text-decoration: none;
-        &:hover {
-            color: $fgc3;
+
+        @media screen and (min-width: $width) {
+            &:hover {
+                color: $fgc3;
+            }
         }
     }
 }
