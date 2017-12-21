@@ -3,12 +3,12 @@
     <!-- information -->
     <div class="info">
         <div class="top">
-            <span>{{ .Date.Format "2006/01/02" }}</span>
+            <span title="Date">{{ .Date.Format "2006/01/02" }}</span>
             <span>@</span>
             <span>
                 {{ range $i, $c := .Params.categories }}
                    {{ if gt $i 0 }}, {{ end }}
-                   <a href="">{{ $c }}</a>
+                   <a href="{{ $.Site.BaseURL }}/categories/{{ $c }}.html">{{ $c }}</a>
                 {{ end }}
             </span>
         </div>
@@ -17,7 +17,7 @@
 
         <div class="bottom">
             {{ range .Params.tags }}
-                <a href="">{{ . }}</a>
+                <a href="{{ $.Site.BaseURL }}/tags/{{ . }}.html">{{ . }}</a>
             {{ end }}
         </div>
     </div>

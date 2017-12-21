@@ -1,5 +1,8 @@
 footer {
-    max-width: $width;
+    width: $width;
+    @media screen and (max-width: $width) {
+        width: 93vw;
+    }
     margin: 20px auto 30px auto;
     display: flex;
     flex-direction: column;
