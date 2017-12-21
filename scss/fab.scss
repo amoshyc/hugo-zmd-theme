@@ -4,7 +4,10 @@ div.fab {
     right: 10px;
     a {
         font-size: 80%;
-        color: rgba($fgc3, 0.5);
+        color: rgba($fgc3, 0.3);
         text-decoration: none;
+        &:hover {
+            color: $fgc3;
+        }
     }
 }

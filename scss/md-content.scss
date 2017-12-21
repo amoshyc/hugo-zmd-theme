@@ -149,6 +149,9 @@
     sup.footnote-ref:first-child {
         margin-left: 2px;
     }
+    sup.footnote-ref:last-child {
+        margin-right: 2px;
+    }
     sup.footnote-ref + sup.footnote-ref::before {
         content: ',';
         color: lighten($fgc3, 10%);
