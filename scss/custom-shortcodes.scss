@@ -70,6 +70,9 @@
                 content: "\229e";
                 position: absolute;
                 left: -25px;
+                @media screen and (max-width: $width) {
+                    position: static;
+                }
             }
         }
 
