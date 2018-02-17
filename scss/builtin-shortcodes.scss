@@ -116,26 +116,24 @@
         flex-direction: column;
         margin: 0px auto;
 
+        img {
+            max-width: 700px;
+            margin: 0px auto;
+        }
+        
         @media screen and (max-width: $width) {
             img {
                 max-width: 93vw;
             }
         }
 
-        * {
+        figcaption {
             margin: 0px auto;
-        }
-
-        img {
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        h4 {
-            margin: 5px auto 10px auto;
-            font-size: 95%;
-            font-weight: normal;
+            h4 {
+                margin: 5px auto 10px auto;
+                font-size: 95%;
+                font-weight: normal;
+            }
         }
     }
 
