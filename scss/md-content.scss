@@ -48,8 +48,8 @@
     & > h2 { @include util-header('H2', 150%); }
     & > h3 { @include util-header('H3', 140%); }
     & > h4 { @include util-header('H4', 130%); }
-    & > h5 { @include util-header('H5', 120%); }
-    & > h6 { @include util-header('H6', 110%); }
+    & > h5 { @include util-header('', 120%); }
+    & > h6 { @include util-header('', 110%); }
 
     // general code block
     pre {

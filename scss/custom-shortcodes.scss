@@ -2,7 +2,7 @@
     // jupyter notebook
     div.jupyter-notebook {
         & > iframe {
-            width: 1.2 * $width;
+            width: calc(#{$width} + 8px);
             @media screen and (max-width: $width) {
                 width: 93vw;
             }
@@ -22,7 +22,6 @@
             width: 93vw;
         }
         margin: 20px auto;
-        border: 1px solid #e3e3e3;
         background-color: #f5f5f5;
 
         span.title {
