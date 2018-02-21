@@ -1,20 +1,26 @@
-@mixin util-header($content, $scale) {
+@mixin util-header($scale, $cnt, $content) {
     font-weight: bold;
     font-size: $scale;
     line-height: $scale;
     color: $fgc1;
 
-    // &:before {
-    //     font-weight: normal;
-    //     content: $content;
-    //     position: absolute;
-    //     margin-top: 2px;
-    //     margin-left: -50px;
-    //     color: #ddd;
-    //     font-size: 65%;
+    &:before {
+        counter-increment: $cnt;
+        content: $content;
 
-    //     @media print {
-    //         display: none;
-    //     }
-    // }
+        font-weight: normal;
+        position: absolute;
+        margin-top: 2px;
+        margin-left: -50px;
+        color: #e6e6e6;
+        font-size: 70%;
+        transition: color 1.5s;
+        transition-timing-function: ease-in-out;
+    }
+
+    &:hover {
+        &:before {
+            color: $fgc1;
+        }
+    }
 }
