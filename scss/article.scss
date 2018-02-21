@@ -23,7 +23,7 @@ article {
         }
 
         h1.title {
-            @include util-header('§', 175%);
+            @include util-header(175%, '', '§');
             margin: 0px;
             line-height: 125%;
 

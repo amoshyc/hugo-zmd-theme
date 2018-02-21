@@ -13,6 +13,7 @@
             & > code {
                 @extend .pygments;
                 color: $fgc1;
+                background-color: rgba(0, 0, 0, 0);
                 font-size: $font-size * 0.85;
                 line-height: $font-size * 0.85 * 1.35;
 
@@ -20,8 +21,14 @@
                     font-family: 'Oxygen Mono', monospace;
                 }
                 span.ln {
-                    color: lighten($fgc1, 30%);
+                    color: #ccc;
                     margin-right: 20px;
+                }
+                span.hl {
+                    span.ln {
+                        color: $fgc1;
+                        font-weight: bold;
+                    }
                 }
             }
         }
@@ -62,6 +69,12 @@
                             font-family: 'Oxygen Mono', monospace;
                             display: block;
                             background-color: $bgc;
+                        }
+                        span.hl {
+                            span.lnt {
+                                color: $fgc1;
+                                font-weight: bold;
+                            }
                         }
                     }
                 }
@@ -133,6 +146,7 @@
                 margin: 5px auto 10px auto;
                 font-size: 95%;
                 font-weight: normal;
+                color: $fgc1;
             }
         }
     }
