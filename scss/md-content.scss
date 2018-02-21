@@ -2,15 +2,12 @@
 
     // paragraph
     p {
+        color: $fgc1;
         white-space: pre-wrap;
         font-size: 105%;
         line-height: 150%;
         letter-spacing: 0.4px;
         word-spacing: 2.4px;
-
-        & > code {
-            background-color: hsl(0, 0, 96%);
-        }
     }
 
     p + p {
@@ -22,6 +19,7 @@
         padding-left: 5px;
         padding-right: 5px;
         color: $fgc4;
+        background-color: hsl(0, 0, 96%);
         font-family: 'Oxygen Mono', monospace;
         font-size: 95%;
     }
@@ -46,9 +44,9 @@
     // header
     & > h1 { @include util-header('H1', 180%); }
     & > h2 { @include util-header('H2', 150%); }
-    & > h3 { @include util-header('H3', 140%); }
-    & > h4 { @include util-header('H4', 130%); }
-    & > h5 { @include util-header('', 120%); }
+    & > h3 { @include util-header('H3', 130%); }
+    & > h4 { @include util-header('H4', 120%); }
+    & > h5 { @include util-header('', 110%); }
     & > h6 { @include util-header('', 110%); }
 
     // general code block
@@ -69,6 +67,7 @@
         
         & > code {
             color: $fgc1;
+            background-color: rgba(0, 0, 0, 0);
             padding: 0px;
             font-size: 85%;
             line-height: 0.85 * 1.35;
@@ -152,11 +151,10 @@
         }
     }
     sup.footnote-ref {
-        margin: 0px 3px;
+        font-size: 100%;
+        line-height: 150%;
+        margin: 0px;
         vertical-align: baseline;
-        a::before, a::after {
-            font-size: 105%;
-        }
         a::before {
             content: '[';
         }

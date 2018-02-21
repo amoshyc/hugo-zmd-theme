@@ -4,17 +4,17 @@
     line-height: $scale;
     color: $fgc1;
 
-    &:before {
-        font-weight: normal;
-        content: $content;
-        position: absolute;
-        margin-top: 2px;
-        margin-left: -50px;
-        color: #ddd;
-        font-size: 65%;
+    // &:before {
+    //     font-weight: normal;
+    //     content: $content;
+    //     position: absolute;
+    //     margin-top: 2px;
+    //     margin-left: -50px;
+    //     color: #ddd;
+    //     font-size: 65%;
 
-        @media print {
-            display: none;
-        }
-    }
+    //     @media print {
+    //         display: none;
+    //     }
+    // }
 }
