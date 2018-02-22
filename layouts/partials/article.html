@@ -8,7 +8,7 @@
             <span>
                 {{ range $i, $c := .Params.categories }}
                    {{ if gt $i 0 }}, {{ end }}
-                   <a href="{{ $.Site.BaseURL }}/categories/{{ $c }}.html">{{ $c }}</a>
+                   <a href="{{ $.Site.BaseURL }}/categories/{{ $c | urlize }}.html">{{ $c }}</a>
                 {{ end }}
             </span>
         </div>
@@ -17,7 +17,7 @@
 
         <div class="bottom">
             {{ range .Params.tags }}
-                <a href="{{ $.Site.BaseURL }}/tags/{{ . }}.html">{{ . }}</a>
+                <a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}.html">{{ . }}</a>
             {{ end }}
         </div>
     </div>

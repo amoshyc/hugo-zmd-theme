@@ -1,0 +1,22 @@
+{{ define "title" }}
+    Tags: {{ .Data.Term }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "content" }}
+    <div class="list">
+        <div class="taxonomy entry">
+            <span>Tags: {{ .Data.Term }}</span>
+        </div>
+
+        {{ range .Paginator.Pages.ByDate.Reverse }}
+            {{ if eq .File.Ext "md" }}
+                <div class="entry">
+                    <span class="title"><a href="{{ .URL }}">{{ .Title }}</a></span>
+                    <span class="info">{{ .Date.Format "2006/01/02" }}</span>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+
+    {{ partial "pagination.html" . }}
+{{ end }}
