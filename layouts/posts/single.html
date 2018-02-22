@@ -3,7 +3,6 @@
 {{ end }}
 
 {{ define "content" }}
-    {{ range .Pages }}
-        <a href="{{ .URL }}">{{ .Title }}</a><br/>
-    {{ end }}
+    {{ partial "article" . }}
+    {{ partial "social" . }}
 {{ end }}
