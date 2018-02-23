@@ -1,11 +1,11 @@
 {{ define "title" }}
-    Tags: {{ .Data.Term }} | {{ .Site.Title }}
+    Tag: {{ .Data.Term }} | {{ .Site.Title }}
 {{ end }}
 
 {{ define "content" }}
     <div class="list">
         <div class="taxonomy entry">
-            <span>Tags: {{ .Data.Term }}</span>
+            <span>Tag: {{ .Data.Term }}</span>
         </div>
 
         {{ range .Paginator.Pages.ByDate.Reverse }}

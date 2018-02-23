@@ -1,10 +1,9 @@
 div.tags {
     margin-top: 30px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     a.tag {
         margin-bottom: 20px;
