@@ -4,7 +4,7 @@
 
 {{ define "content" }}
     <div class="list">
-        {{ range .Paginator.Pagess }}
+        {{ range .Paginator.Pages }}
             {{ if eq .File.Ext "md" }}
                 <div class="entry">
                     <span class="title"><a href="{{ .URL }}">{{ .Title }}</a></span>
