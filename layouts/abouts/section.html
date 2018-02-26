@@ -4,6 +4,10 @@
 
 {{ define "content" }}
     <div class="list">
+        <div class="taxonomy entry">
+            <span>About</span>
+        </div>
+
         {{ range .Paginator.Pages.ByDate.Reverse }}
             {{ if eq .File.Ext "md" }}
                 <div class="entry">
