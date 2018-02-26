@@ -8,7 +8,7 @@
             <span>Tag: {{ .Data.Term }}</span>
         </div>
 
-        {{ range .Paginator.Pages.ByDate.Reverse }}
+        {{ range .Paginator.Pages }}
             {{ if eq .File.Ext "md" }}
                 <div class="entry">
                     <span class="title"><a href="{{ .URL }}">{{ .Title }}</a></span>
