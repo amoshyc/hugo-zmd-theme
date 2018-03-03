@@ -101,7 +101,7 @@
 
     // image
     p > img {
-        max-width: $width;
+        width: $width;
         margin: 20px 0px;
         @media screen and (max-width: $width) {
             max-width: 93vw;

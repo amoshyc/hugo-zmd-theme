@@ -14,8 +14,8 @@
                 @extend .pygments;
                 color: $fgc1;
                 background-color: rgba(0, 0, 0, 0);
-                font-size: $font-size * 0.85;
-                line-height: $font-size * 0.85 * 1.35;
+                font-size: $font-size * 0.80;
+                line-height: $font-size * 0.80 * 1.35;
 
                 span {
                     font-family: 'Oxygen Mono', monospace;
@@ -62,8 +62,8 @@
 
                     code {
                         color: #ddd; // overwrite the color of general code
-                        font-size: $font-size * 0.85;
-                        line-height: $font-size * 0.85 * 1.35;
+                        font-size: $font-size * 0.80;
+                        line-height: $font-size * 0.80 * 1.35;
                         
                         span.lnt {
                             font-family: 'Oxygen Mono', monospace;
