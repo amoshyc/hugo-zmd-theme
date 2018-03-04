@@ -8,7 +8,7 @@
             <span>Tags</span>
         </div>
 
-        {{ with .Data.Terms }}
+        {{ if .Data.Terms }}
             <div class="tags">
                 {{ $len := (len .Data.Terms) }}
                 {{ $mx := (index .Data.Terms.ByCount 0).Count }}
