@@ -146,21 +146,41 @@
 
     // footnote
     div.footnotes {
-        hr::before {
-            font-weight: normal;
-            content: "FN";
-            position: absolute;
-            margin-top: -10px;
-            margin-left: -50px;
-            color: #ddd;
-            font-size: 100%;
+        hr {
+            // hr with centered text, code from
+            // https://codepen.io/scottzirkel/pen/yNxNME
+            position: relative;
+            outline: 0;
+            border: 0;
+            text-align: center;
+            height: $font-size * 1.3;
 
-            @media print {
-                margin-left: -40px;
+            &:before { // the line
+                content: "";
+                background: linear-gradient(to right, $bgc, $fgc1, $bgc);
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                height: 1px;
+            }
+
+            &:after { // the text
+                content: "Ref.";
+                position: relative;
+                display: inline-block;
+                padding: 0 12px;
+                line-height: $font-size * 1.3;
+                color: $fgc1; // same color of line
+                background-color: $bgc; // same color of background
             }
         }
+
+        a.footnote-return { // back reference
+            margin-left: 5px;
+        }
     }
-    sup.footnote-ref {
+    sup.footnote-ref { // footnote in text
         font-size: 100%;
         line-height: 150%;
         margin: 0px;
@@ -171,8 +191,5 @@
         a::after {
             content: ']';
         }
-    }
-    a.footnote-return {
-        margin-left: 5px;
     }
 }
