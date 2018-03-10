@@ -26,10 +26,6 @@ article {
             @include util-header(175%, '', '§');
             margin: 0px;
             line-height: 125%;
-
-            &::before {
-                margin-left: -35px;
-            }
         }
 
         div.bottom {
