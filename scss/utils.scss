@@ -14,5 +14,11 @@
         margin-left: -50px;
         color: $fgc1;
         font-size: 70%;
+
+        @media print {
+            position: static;
+            margin: 0px 10px 0px 0px;
+            font-size: 100%;
+        }    
     }
 }
