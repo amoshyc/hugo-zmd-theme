@@ -2,12 +2,12 @@
     
     <!-- icon -->
     <div class="icon">
-        <a href="{{ .Site.BaseURL }}"><img src="{{ "abouts/me.jpg" | relURL }}" alt="me"></a>
+        <a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.avatar | relURL }}" alt="me"></a>
     </div>
 
     <!-- name -->
     <div class="name">
-        <a href="{{ .Site.BaseURL }}">Yu-Cheng Huang</a>
+        <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
 
     <!-- navigation/menu -->
