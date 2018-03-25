@@ -27,6 +27,7 @@
             });
             </script>
         {{ end }}
+
     </head>
 
     <body>
@@ -40,6 +41,9 @@
 
         <!-- footer -->
         {{ partial "footer" . }}
+
+        <!-- google analytics -->
+        {{ template "_internal/google_analytics_async.html" . }}
 </body>
 
 </html>
