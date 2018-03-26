@@ -36,5 +36,8 @@
         {{ .Content }}
     </div>
 
-    
+    <!-- disqus -->
+    {{ if .Site.DisqusShortname }}
+        {{ partial "comments.html" .}}
+    {{ end }}
 </article>
