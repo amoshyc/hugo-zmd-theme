@@ -79,8 +79,8 @@
             color: $fgc1;
             background-color: rgba(0, 0, 0, 0);
             padding: 0px;
-            font-size: 85%;
-            line-height: 0.85 * 1.35;
+            font-size: $font-size * 0.80;
+            line-height: 130%;
             white-space: pre;
             overflow-y: hidden;
         }
