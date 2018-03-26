@@ -22,12 +22,14 @@
         background-color: hsl(0, 0, 96%);
         font-family: 'Oxygen Mono', monospace;
         font-size: 90%;
+        overflow-wrap: break-word;
     }
 
     // hyperlink
     a {
         color: $fgc3;
         text-decoration: none;
+        overflow-wrap: break-word;
 
         &:hover {
             color: lighten($fgc3, 10%);
@@ -74,7 +76,7 @@
         @media screen and (max-width: $width) {
             width: 93vw;
         }
-        
+
         & > code {
             color: $fgc1;
             background-color: rgba(0, 0, 0, 0);
@@ -91,7 +93,7 @@
         margin: 20px 0px;
         border-left: 2px solid #ddd;
         padding-left: 38px;
-        
+
         p {
             width: calc(100% - 40px);
             line-height: 150%;
@@ -108,7 +110,7 @@
         }
     }
 
-    // hr 
+    // hr
     hr {
         margin: 24px 0px;
         border-color: rgba(255, 255, 255, 0.4);
