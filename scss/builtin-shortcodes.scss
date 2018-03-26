@@ -9,13 +9,14 @@
             @media screen and (max-width: $width) {
                 width: 93vw;
             }
+            font-size: $font-size * 0.80;
+            line-height: 150%;
 
             & > code {
                 @extend .pygments;
                 color: $fgc1;
                 background-color: rgba(0, 0, 0, 0);
                 font-size: $font-size * 0.80;
-                line-height: $font-size * 0.80 * 1.35;
 
                 span {
                     font-family: 'Oxygen Mono', monospace;
@@ -59,10 +60,10 @@
                     width: 30px;
                     padding: 10px 0px;
                     text-align: right;
-
+                    
                     code {
                         font-size: $font-size * 0.80;
-                        line-height: $font-size * 0.80 * 1.35;
+                        line-height: 150%;
                         span.lnt {
                             font-family: 'Oxygen Mono', monospace;
                             display: block;
@@ -83,12 +84,14 @@
                 padding: 10px 5px 10px $font-size;
                 pre.chroma {
                     width: auto;
+                    font-size: $font-size * 0.80;
+                    line-height: 150%;
+                    
                     code {
                         @extend .pygments;
                         color: $fgc1;
-                        font-size: $font-size * 0.80;
-                        line-height: $font-size * 0.80 * 1.35;
                         span {
+                            font-size: $font-size * 0.80;
                             font-family: 'Oxygen Mono', monospace;
                         }
                     }

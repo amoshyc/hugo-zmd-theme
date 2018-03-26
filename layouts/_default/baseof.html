@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="tw">
     <head>
         <title> {{ template "title" . }} </title>
@@ -9,6 +10,9 @@
         
         <!-- zmd style & script -->
         <link rel="stylesheet" href="{{ "style.min.css" | relURL }}">
+
+        <!-- anchor js -->
+
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         {{ if .Site.GoogleAnalytics }}
@@ -50,6 +54,9 @@
 
         <!-- footer -->
         {{ partial "footer" . }}
+
+        <!-- anchor js -->
+
 </body>
 
 </html>
