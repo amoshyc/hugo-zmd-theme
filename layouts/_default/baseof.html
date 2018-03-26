@@ -12,7 +12,9 @@
         <link rel="stylesheet" href="{{ "style.min.css" | relURL }}">
 
         <!-- anchor js -->
-
+        {{ if .Site.Params.anchor }}
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        {{ end }}
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         {{ if .Site.GoogleAnalytics }}
@@ -56,7 +58,14 @@
         {{ partial "footer" . }}
 
         <!-- anchor js -->
-
+        {{ if .Site.Params.anchor }}
+            <script>
+                anchors.options = {
+                    placement: 'right',
+                };
+                anchors.add('.md-content > h1, .md-content > h2, .md-content > h3, .md-content > h4');
+            </script>
+        {{ end }}
 </body>
 
 </html>
