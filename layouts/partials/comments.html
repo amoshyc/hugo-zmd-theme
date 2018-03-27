@@ -8,8 +8,8 @@
 function expand_disqus() {
     // Don't ever inject Disqus on localhost--it creates unwanted
     // discussions from 'localhost:1313' on your Disqus account...
-    // if (window.location.hostname == "localhost")
-    //     return;
+    if (window.location.hostname == "localhost")
+        return;
 
     document.getElementById('expand-btn').style.display = "none";
 
