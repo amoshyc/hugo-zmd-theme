@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
 
+    @media print {
+        display: none;
+    }
+
     #expand-btn {
         width: 200px;
         height: 50px;
