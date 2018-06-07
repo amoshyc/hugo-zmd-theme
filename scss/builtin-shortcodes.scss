@@ -1,9 +1,9 @@
 .md-content {
-    
+
     // highlight
     div.highlight {
         margin: 20px 0px;
-        
+
         & > pre { // inline mode
             width: $width;
             @media screen and (max-width: $width) {
@@ -19,7 +19,7 @@
                 font-size: $font-size * 0.80;
 
                 span {
-                    font-family: 'Oxygen Mono', monospace;
+                    font-family: 'Fira Code', monospace;
                 }
                 span.ln {
                     color: #aaa;
@@ -33,7 +33,7 @@
                 }
             }
         }
-        
+
         table.lntable { // table mode
             width: $width;
             @media screen and (max-width: $width) {
@@ -47,7 +47,7 @@
             overflow-x: auto;
             overflow-y: hidden;
             background-color: #fff;
-            
+
             tbody, tr, td, pre, code {
                 margin: 0px;
                 padding: 0px;
@@ -60,12 +60,12 @@
                     width: 30px;
                     padding: 10px 0px;
                     text-align: right;
-                    
+
                     code {
                         font-size: $font-size * 0.80;
                         line-height: 150%;
                         span.lnt {
-                            font-family: 'Oxygen Mono', monospace;
+                            font-family: 'Fira Code', monospace;
                             display: block;
                             color: #aaa;
                         }
@@ -86,13 +86,13 @@
                     width: auto;
                     font-size: $font-size * 0.80;
                     line-height: 150%;
-                    
+
                     code {
                         @extend .pygments;
                         color: $fgc1;
                         span {
                             font-size: $font-size * 0.80;
-                            font-family: 'Oxygen Mono', monospace;
+                            font-family: 'Fira Code', monospace;
                         }
                     }
                 }
@@ -111,7 +111,7 @@
         div.gist-data {
             overflow-y: hidden;
             span {
-                font-family: 'Oxygen Mono', monospace;
+                font-family: 'Fira Code', monospace;
             }
         }
     }
@@ -126,7 +126,7 @@
             max-width: 700px;
             margin: 0px auto;
         }
-        
+
         @media screen and (max-width: $width) {
             img {
                 max-width: 93vw;

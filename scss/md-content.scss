@@ -20,7 +20,7 @@
         padding-right: 5px;
         color: $fgc4;
         background-color: hsl(0, 0, 96%);
-        font-family: 'Oxygen Mono', monospace;
+        font-family: 'Fira Code', monospace;
         font-size: 90%;
     }
 
@@ -66,7 +66,7 @@
         padding: 10px 10px;
         border: 1px solid #ccc;
         white-space: pre;
-        font-family: 'Oxygen Mono', monospace;
+        font-family: 'Fira Code', monospace;
         background-color: lighten($bgc, 2%);
         overflow-x: auto;
         overflow-y: hidden;
@@ -74,7 +74,7 @@
         @media screen and (max-width: $width) {
             width: 93vw;
         }
-        
+
         & > code {
             color: $fgc1;
             background-color: rgba(0, 0, 0, 0);
@@ -91,7 +91,7 @@
         margin: 20px 0px;
         border-left: 2px solid #ddd;
         padding-left: 38px;
-        
+
         p {
             width: calc(100% - 40px);
             line-height: 150%;
@@ -108,7 +108,7 @@
         }
     }
 
-    // hr 
+    // hr
     hr {
         margin: 24px 0px;
         border-color: rgba(255, 255, 255, 0.4);

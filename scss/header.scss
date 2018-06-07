@@ -6,7 +6,7 @@ header {
     @media print {
         display: none;
     }
-    
+
     div.icon {
         margin: 30px auto 0px auto;
         img {
@@ -15,7 +15,7 @@ header {
             border-radius: $icon-size / 2;
         }
     }
-    
+
     div.name {
         margin: 8px auto 0px auto;
         a {
@@ -25,7 +25,7 @@ header {
             font-family: 'Roboto Slab', 'Source Han Sans TW', 'Noto Sans TC', serif;
         }
     }
-    
+
     div.menu {
         margin: 6px auto 0px auto;
         a {

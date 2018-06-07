@@ -20,11 +20,11 @@
         text-align: center;
         vertical-align: baseline;
         cursor: pointer;
-        
+
         color: $fgc1;
         background-color: rgba(white, 0.1);
         transition: all 0.25s ease-in-out;
-        
+
         &:hover, &:focus {
             border: 2px solid $fgc1;
             border-radius: 25px;
