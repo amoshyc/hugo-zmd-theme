@@ -19,7 +19,11 @@ footer {
 
         a {
             color: lighten($fgc1, 45%);
-            text-decoration: underline;
+            text-decoration: none;
+
+            &:hover {
+                color: lighten($fgc1, 10%);
+            }
         }
     }
 }
